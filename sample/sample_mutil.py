@@ -44,7 +44,7 @@ def main():
 
     logger.log("creating model and diffusion...")
     # different modes, if noise or acc method, please specify 'data', 'raster', and 'loss'.
-    model, diffusion, _, _ = create_model_and_diffusion(
+    model, diffusion = create_model_and_diffusion(
         # model, diffusion = create_model_and_diffusion_acc(
         # model, diffusion = create_model_and_diffusion_noise(
         **args_to_dict(args, model_and_diffusion_defaults().keys())
