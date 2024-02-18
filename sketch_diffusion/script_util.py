@@ -12,6 +12,7 @@ from .unet import SuperResModel, UNetModel, AttentionBlock
 NUM_CLASSES = 1000
 diffusion_steps = 1000
 num_N = 192
+num_N_2 = 64
 num_res_blocks = 3
 
 
@@ -51,7 +52,28 @@ def model_and_diffusion_defaults():
         use_checkpoint=False,
         use_scale_shift_norm=True,
     )
-
+def model_and_diffusion_defaults_2():
+    return dict(
+        image_size=64,
+        num_channels=64,
+        num_res_blocks=num_res_blocks,
+        num_heads=4,
+        num_heads_upsample=-1,
+        attention_resolutions="16,8",
+        dropout=0.0,
+        learn_sigma=False,
+        sigma_small=False,
+        class_cond=False,
+        diffusion_steps=diffusion_steps,
+        noise_schedule="linear",
+        timestep_respacing="",
+        use_kl=False,
+        predict_xstart=False,
+        rescale_timesteps=True,
+        rescale_learned_sigmas=True,
+        use_checkpoint=False,
+        use_scale_shift_norm=True,
+    )
 
 def create_model_and_diffusion(
         image_size,

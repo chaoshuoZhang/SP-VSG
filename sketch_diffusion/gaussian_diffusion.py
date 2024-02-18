@@ -111,6 +111,7 @@ class GaussianDiffusion:
 
         self.third_pos_loss_fn = th.nn.CrossEntropyLoss()
 
+    '''    
     def mse_cross_entropy(self, pen_state, target_pen_state, mse):
         #
         Softmax = th.nn.Softmax(dim=1)
@@ -153,7 +154,7 @@ class GaussianDiffusion:
     def get_loss(self, loss_gm, loss_am, a=0.3):
         return torch.exp(loss_am) * loss_am - loss_gm / torch.exp(
             2 - loss_gm)  # * a * torch.exp(loss_am - 1)  # / (torch.exp(loss_am))
-
+        '''
     def q_mean_variance(self, x_start, t):
         mean = (
                 _extract_into_tensor(self.sqrt_alphas_cumprod, t, x_start.shape) * x_start
@@ -540,7 +541,7 @@ class GaussianDiffusion:
         output = th.where((t == 0), decoder_nll, kl)
         return {"output": output, "pred_xstart": out["pred_xstart"]}
 
-    def get_a(self, mse, pen_state):
+    def get_a(self, mse):
         mse_mean = mse.mean()
         if mse_mean < 0.2:
             a = 0.01
@@ -607,9 +608,8 @@ class GaussianDiffusion:
             loss_am = self.third_pos_loss_fn(pen_state.cpu(), target_pen_state.cpu())
 
             terms["pen_state"] = loss_am
-            a = self.get_a(terms["mse"], terms["pen_state"])
+            # a = self.get_a(terms["mse"])
 
-            # self.get_loss(loss_gm,loss_am )
             if "vb" in terms:
                 terms["loss"] = terms["mse"]
             else:
