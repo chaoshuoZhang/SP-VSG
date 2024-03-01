@@ -6,6 +6,7 @@ We have publicly released our project code here, and the subsequent content will
   <img src="images/identifiability_comparison.png" alt="N represents the length of the vector sketch, while Steps denote the time steps in the diffusion model's backward process." width="600">
 </div>
 
+
 # Method
 <div align="center">
   <img src="images/fig_1.jpg" alt="Comparison of Different Method Architectures." width="400">
