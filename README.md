@@ -16,6 +16,7 @@
 # Method
 <div align="center">
   <img src="images/fig_1.jpg" alt="Comparison of Different Method Architectures." width="600" height="400">  
+  
   Comparison of Different Method Architectures.
 </div>
 
