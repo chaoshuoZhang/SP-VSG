@@ -11,8 +11,10 @@ We have publicly released our project code here, and the subsequent content will
 # Method
 <div align="center">
   <img src="images/fig_1.jpg" alt="Comparison of Different Method Architectures." width="400">
+  
   Comparison of Different Method Architectures.
 </div>
+
   For the task of vector sketch generation, we introduced the DPM-Solver++ high-order solver for sampling vector sketches, building upon the traditional diffusion model for the first time. More importantly, we observed the characteristic of the diffusion model to expedite the formation of well-defined targets during the denoising process for simple sketches. Based on this observation, we further devised a self-guided vector sketch generation algorithm. Multiple-scale samples commence sampling simultaneously, utilizing rapid sampling information in the prototype space of the small scale to guide the fusion of features at specific steps, thereby guiding the generation of larger scale sketches.
 
 # result
