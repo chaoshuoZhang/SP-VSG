@@ -2,7 +2,7 @@
   We have publicly released our project code here, and the subsequent content will be continuously improved and updated. Thanks to [OpenAI](https://github.com/openai/guided-diffusion) and [SketchKnitter](https://github.com/wangqiang9/SketchKnitter) for the open-source code
 # motivation
 <div align="center">
-  <img src="images/figure_forward.pdf"  width="600">
+  <img src="images/figure_forward.jpg"  width="600">
   
    Forward Diffusion and Reverse Denoising of Vector Sketch.
 </div>
