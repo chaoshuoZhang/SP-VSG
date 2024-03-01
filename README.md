@@ -5,13 +5,15 @@ We have publicly released our project code here, and the subsequent content will
 <div align="center">
   <img src="images/identifiability_comparison.png" alt="N represents the length of the vector sketch, while Steps denote the time steps in the diffusion model's backward process." width="600">
 </div>
+  N represents the length of the vector sketch, while Steps denote the time steps in the diffusion model's backward process.
 
 
 # Method
 <div align="center">
   <img src="images/fig_1.jpg" alt="Comparison of Different Method Architectures." width="400">
+  Comparison of Different Method Architectures.
 </div>
-For the task of vector sketch generation, we introduced the DPM-Solver++ high-order solver for sampling vector sketches, building upon the traditional diffusion model for the first time. More importantly, we observed the characteristic of the diffusion model to expedite the formation of well-defined targets during the denoising process for simple sketches. Based on this observation, we further devised a self-guided vector sketch generation algorithm. Multiple-scale samples commence sampling simultaneously, utilizing rapid sampling information in the prototype space of the small scale to guide the fusion of features at specific steps, thereby guiding the generation of larger scale sketches.
+  For the task of vector sketch generation, we introduced the DPM-Solver++ high-order solver for sampling vector sketches, building upon the traditional diffusion model for the first time. More importantly, we observed the characteristic of the diffusion model to expedite the formation of well-defined targets during the denoising process for simple sketches. Based on this observation, we further devised a self-guided vector sketch generation algorithm. Multiple-scale samples commence sampling simultaneously, utilizing rapid sampling information in the prototype space of the small scale to guide the fusion of features at specific steps, thereby guiding the generation of larger scale sketches.
 
 # result
-Our method (SP-VSG), at steps=30, surpasses the FID and GS image evaluation metrics compared to full steps of DDIM and the previous state-of-the-art method SketchKnitter.
+  Our method (SP-VSG), at steps=30, surpasses the FID and GS image evaluation metrics compared to full steps of DDIM and the previous state-of-the-art method SketchKnitter.
